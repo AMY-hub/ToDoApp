@@ -1,0 +1,63 @@
+
+.addForm {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    &Input {
+        height: 3em;
+        padding: 1em;
+        width: 70%;
+        font-size: inherit;
+        border-radius: 35px;
+        margin-right: 1em;
+        background-color: var(--mainLight);
+        color: var(--mainDark);
+        box-shadow: 7px 10px 20px rgba($color: #303030, $alpha: 0.1);
+        opacity: 0.6;
+        transition: 1s;
+
+        &:focus {
+            opacity: 1;
+        }
+    }
+
+    &Btn{
+        height: 73px;
+        width: 73px;
+        border-radius: 50%;
+        background-color: var(--accent);
+        box-shadow: 2px 3px 4px rgba($color: #ffffff, $alpha: 0.4) inset,
+        -1px -3px 4px rgba($color: #0000, $alpha: 0.15) inset, 
+        2px 6px 10px rgba($color: #212121, $alpha: 0.25);
+        transition: 0.5s;
+
+        &:hover {
+            transform: translateY(-7px);
+            background-color: var(--accentLight);
+        }
+    }
+
+    &Icon{
+        color: var(--mainLight);
+        font-size: 40px;
+        transform: rotate(-90deg) scaleY(-1);
+
+        &::before {
+            opacity: 0.9;
+        }
+    }
+}
+
+@media(max-width: 768px) {
+    .addFormBtn {
+        width: calc(40px + (73 - 40) * ((100vw - 320px) / (769 - 320)));
+        height: calc(40px + (73 - 40) * ((100vw - 320px) / (769 - 320)));
+    }
+
+    .addFormIcon {
+        font-size: calc(20px + (40 - 20) * ((100vw - 320px) / (768 - 320)));
+    }
+}
+
+

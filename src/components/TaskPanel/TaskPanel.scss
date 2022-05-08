@@ -1,0 +1,93 @@
+.taskPanel {
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 2em 2.6em 2em;
+    margin-bottom: 2em;
+    background-color: var(--mainLight);
+    box-shadow: 7px 10px 20px rgba($color: #303030, $alpha: 0.1);
+    border-radius: 4em;
+    border-top-left-radius: 0;
+
+    &Header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1em;
+    }
+
+    .editBtn {
+        opacity: 0.5;
+        transition: 600ms;
+        &:hover {
+            opacity: 1;
+        }
+
+        &::before {
+            font-size: 2em;
+            margin-right: 5px;
+        }
+    }
+
+    .editInput {
+        font-family: inherit;
+        font-size: 1.6em;
+        line-height: 1.2;
+        font-weight: 600;
+        padding-left: 5px;
+        color: var(--mainDark);
+        background-color: rgba($color: #ffffff, $alpha: 0.6);
+        border-left: 2px solid var(--mainDark);
+        border-radius: 0.25em;
+    }
+    
+    &Title {
+        font-size: 1.6em;
+        line-height: 1.2;
+        padding-left: 5px;
+        color: var(--mainDark);
+        border-left: 2px solid var(--mainDark);
+    }
+}
+
+.clearDone {
+    margin-top: auto;
+    margin-left: auto;
+    color: var(--accent);
+    font-size: 1em;
+    float: right;
+    
+    &::after {
+        padding-left: 5px;
+        vertical-align: middle;
+    }
+
+    &:disabled {
+        color: #9e9e9e;
+    }
+}
+
+
+.noTasks {
+    color: var(--mainDark);
+    font-size: 1.1em;
+    padding-left: 1em;
+    padding-top: 1em;
+    opacity: 0.7;
+}
+
+@media(max-width: 768px) {
+    .taskPanel {
+        padding: 2em;
+        border-radius: 3em;
+        border-top-left-radius: 0;
+    }
+}
+
+@media(max-width: 400px) {
+    .taskPanel {
+        padding: 1.5em;
+        border-radius: 2.5em;
+        border-top-left-radius: 0;
+    }
+}

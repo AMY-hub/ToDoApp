@@ -1,0 +1,30 @@
+.header {
+    background-color: var(--header);
+    color: var(--mainLight);
+     
+    &Row {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 6.3em;
+        padding-right: 1em;
+        padding-left: 1em;
+    }
+
+    &Logo {
+        display: flex;
+        align-items: center;
+        img {
+            width: 4.6em;
+            height: 4.6em;
+            margin-right: 14px;
+        }
+    }
+
+    &Title {
+        font-size: 2.8em;
+        text-shadow: 2px 3px 8px var(--mainDark);
+    }
+}
