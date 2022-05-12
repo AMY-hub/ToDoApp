@@ -1,7 +1,5 @@
 import Task from '../Task/Task';
 
-import './TaskList.scss';
-
 function TaskList({ list, setList }) {
 
     const deleteTask = (id) => {

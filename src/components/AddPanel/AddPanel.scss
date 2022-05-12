@@ -1,4 +1,3 @@
-
 .addForm {
     display: flex;
     align-items: center;
@@ -36,6 +35,11 @@
             transform: translateY(-7px);
             background-color: var(--accentLight);
         }
+
+        @media(max-width: 768px) {
+            width: calc(40px + (73 - 40) * ((100vw - 320px) / (769 - 320)));
+            height: calc(40px + (73 - 40) * ((100vw - 320px) / (769 - 320)));
+        }
     }
 
     &Icon{
@@ -46,17 +50,10 @@
         &::before {
             opacity: 0.9;
         }
-    }
-}
 
-@media(max-width: 768px) {
-    .addFormBtn {
-        width: calc(40px + (73 - 40) * ((100vw - 320px) / (769 - 320)));
-        height: calc(40px + (73 - 40) * ((100vw - 320px) / (769 - 320)));
-    }
-
-    .addFormIcon {
-        font-size: calc(20px + (40 - 20) * ((100vw - 320px) / (768 - 320)));
+        @media(max-width: 768px) {
+            font-size: calc(20px + (40 - 20) * ((100vw - 320px) / (768 - 320)));
+        }
     }
 }
 

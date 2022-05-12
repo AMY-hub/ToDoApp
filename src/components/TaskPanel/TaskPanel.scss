@@ -10,6 +10,18 @@
     border-radius: 4em;
     border-top-left-radius: 0;
 
+    @media(max-width: 768px) {
+        padding: 2em;
+        border-radius: 3em;
+        border-top-left-radius: 0;
+    }
+
+    @media(max-width: 400px) {
+        padding: 1.5em;
+        border-radius: 2.5em;
+        border-top-left-radius: 0;
+    }
+
     &Header {
         display: flex;
         align-items: center;
@@ -17,6 +29,7 @@
     }
 
     .editBtn {
+        color: var(--mainDark);
         opacity: 0.5;
         transition: 600ms;
         &:hover {
@@ -67,27 +80,10 @@
     }
 }
 
-
 .noTasks {
     color: var(--mainDark);
     font-size: 1.1em;
     padding-left: 1em;
     padding-top: 1em;
     opacity: 0.7;
-}
-
-@media(max-width: 768px) {
-    .taskPanel {
-        padding: 2em;
-        border-radius: 3em;
-        border-top-left-radius: 0;
-    }
-}
-
-@media(max-width: 400px) {
-    .taskPanel {
-        padding: 1.5em;
-        border-radius: 2.5em;
-        border-top-left-radius: 0;
-    }
 }
